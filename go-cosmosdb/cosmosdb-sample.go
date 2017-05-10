@@ -18,10 +18,10 @@ type Person struct {
 
 func main() {
 	dialInfo := &mgo.DialInfo{
-		Addrs:    []string{"jiren-acs.documents.azure.com:10255"},
-		Database: "",
-		Username: "jiren-acs",
-		Password: "C6nb062RuVzZkjnqkipzokcxmv2YLNlLCpO2rDgo30XgRMZeHdJBrVX360CSIIQQyYzsLtessvrl4lZyBHq7cw==",
+		Addrs:    []string{"{{server.com}}:{{port number}}"},
+		Database: "{{database name}}",
+		Username: "{{user name}}",
+		Password: "{{password}}",
 		DialServer: func(addr *mgo.ServerAddr) (net.Conn, error) {
 			return tls.Dial("tcp", addr.String(), &tls.Config{})
 		},

@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	connStr := "server=jiren-sql.database.windows.net;user id=jiren;password=Understand@Remote;port=1433;database=jiren-sql"
+	connStr := "server={{server.com}};user id={{user id}};password={{password}};port={{port number}};database={{database name}}"
 
 	db, err := sql.Open("mssql", connStr)
 
